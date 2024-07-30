@@ -10,8 +10,10 @@ const app = express();
 
 app.use(express.json());
 
-app.listen(1234, () => {
-    console.log('Estoy dentro 1234');
+const PORT = process.env.PORT ?? 1234;
+
+app.listen(PORT, () => {
+    console.log(`Estoy dentro ${PORT}`);
 });
 
 
